@@ -1,0 +1,130 @@
+:root {
+  /* 主色调 */
+  --color-primary: #FF8C00;
+  --color-primary-light: #FFA940;
+  --color-primary-dark: #E07800;
+
+  /* 辅助色 */
+  --color-secondary: #2C5F8A;
+  --color-secondary-light: #3A7DB5;
+
+  /* 状态色 */
+  --color-danger: #E53935;
+  --color-success: #43A047;
+  --color-warning: #FFA000;
+  --color-info: #1976D2;
+
+  /* 背景色 */
+  --bg-page: #F9F5F0;
+  --bg-white: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-gray: #F5F5F5;
+
+  /* 文字色 */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-hint: #999999;
+  --text-white: #FFFFFF;
+
+  /* 边框 */
+  --border-color: #E8E8E8;
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* 间距 */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* 字体 */
+  --font-sm: 12px;
+  --font-md: 14px;
+  --font-lg: 16px;
+  --font-xl: 18px;
+  --font-xxl: 24px;
+
+  /* 适老化 - 老人端使用 */
+  --elderly-font-md: 18px;
+  --elderly-font-lg: 22px;
+  --elderly-font-xl: 28px;
+  --elderly-btn-height: 52px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: var(--font-md);
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  height: 100%;
+  overflow-y: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* 适老化样式 */
+.elderly-page {
+  font-size: var(--elderly-font-md);
+}
+
+.elderly-page .elderly-title {
+  font-size: var(--elderly-font-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.elderly-page .elderly-btn {
+  min-height: var(--elderly-btn-height);
+  font-size: var(--elderly-font-lg);
+  border-radius: var(--radius-md);
+}
+
+/* 卡片样式 */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* 安全区域 */
+.safe-area-padding {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 固定底部按钮 */
+.bottom-fixed-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-md);
+  padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom));
+  background: var(--bg-white);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  z-index: 100;
+}
